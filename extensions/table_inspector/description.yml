@@ -1,0 +1,31 @@
+extension:
+  name: table_inspector
+  description: Observability into DuckDB storage internals at the database, table, and column levels
+  version: 0.0.1
+  language: C++
+  build: cmake
+  license: MIT
+  excluded_platforms: "linux_amd64;linux_arm64;linux_amd64_musl;osx_amd64;osx_arm64;wasm_mvp;wasm_eh;wasm_threads;windows_arm64;windows_amd64_mingw"
+  maintainers:
+    - Andrewtangtang
+    - dentiny
+repo:
+  github: Andrewtangtang/duckdb-table-inspector
+  ref: 14a4de69d4d3be4b149439f637264936a4676fdd
+docs:
+  hello_world: |
+    -- List all attached persistent databases with file sizes
+    SELECT * FROM inspect_storage();
+
+    -- List all tables with their persisted data size
+    SELECT * FROM inspect_database();
+
+    -- Per-segment storage details for a specific column
+    SELECT * FROM inspect_column('my_table', 'my_column');
+
+    -- High-level storage breakdown
+    SELECT * FROM inspect_block_usage();
+  extended_description: |
+    A DuckDB extension that provides observability into DuckDB storage internals.
+    It helps users understand storage usage at the database, table, and column levels,
+    and addresses issues like unexpected file size or poor compression.

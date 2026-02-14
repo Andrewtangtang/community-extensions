@@ -5,13 +5,13 @@ extension:
   language: C++
   build: cmake
   license: MIT
-  excluded_platforms: "wasm_mvp;wasm_eh;wasm_threads"
+  excluded_platforms: "linux_amd64;linux_arm64;linux_amd64_musl;osx_amd64;osx_arm64;wasm_mvp;wasm_eh;wasm_threads;windows_arm64;windows_amd64_mingw"
   maintainers:
     - Andrewtangtang
     - dentiny
 repo:
-  github: dentiny/duckdb-table-inspector
-  ref: 64a5a306153a6ef1691097431807816ae59ed56d
+  github: Andrewtangtang/duckdb-table-inspector
+  ref: 14a4de69d4d3be4b149439f637264936a4676fdd
 docs:
   hello_world: |
     -- List all attached persistent databases with file sizes

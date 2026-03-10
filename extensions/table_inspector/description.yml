@@ -12,7 +12,7 @@ extension:
 repo:
   github: Andrewtangtang/duckdb-table-inspector
   andium: 13b830f3ccee4b4be3058a8211ad2f566c1ef698
-  ref: 2aee370be4e9316e12e5fef64cd3f07e25e40131
+  ref: 7c6292e953a5cc09617b4d8dccabf4c19a67cbc2
 docs:
   hello_world: |
     -- List all attached persistent databases with file sizes

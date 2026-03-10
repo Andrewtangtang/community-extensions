@@ -1,7 +1,7 @@
 extension:
   name: table_inspector
   description: Observability into DuckDB storage internals at the database, table, and column levels
-  version: 0.0.1
+  version: 0.1.0
   language: C++
   build: cmake
   license: MIT
@@ -12,13 +12,13 @@ extension:
 repo:
   github: dentiny/duckdb-table-inspector
   andium: 13b830f3ccee4b4be3058a8211ad2f566c1ef698
-  ref: 7fb029e2cde2904a572aee40b94684dfd5f55d19
+  ref: 8c97a3df62292d3569562a8c9f64e8861b28a028
 docs:
   hello_world: |
     -- List all attached persistent databases with file sizes
     SELECT * FROM inspect_storage();
 
-    -- List all tables with their persisted data size
+    -- List all tables with their persisted data and index size
     SELECT * FROM inspect_database();
 
     -- Per-segment storage details for a specific column
